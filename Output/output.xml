@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230811 15:44:48.785" rpa="false" schemaversion="4">
+<suite id="s1" name="Testcase" source="C:\Users\naikp\OneDrive\Desktop\Robotassign\Testcase\Testcase.robot">
+<kw name="Open My Url And Browser" library="keyword" type="SETUP">
+<kw name="Open Browser" library="RPA.Browser.Selenium">
+<arg>${Url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230811 15:44:49.572" level="INFO">Opening browser 'chrome' to base url 'https://www.flipkart.com'.</msg>
+<status status="PASS" starttime="20230811 15:44:49.572" endtime="20230811 15:44:53.092"/>
+</kw>
+<kw name="Maximize Browser Window" library="RPA.Browser.Selenium">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230811 15:44:53.092" endtime="20230811 15:44:53.221"/>
+</kw>
+<status status="PASS" starttime="20230811 15:44:49.572" endtime="20230811 15:44:53.221"/>
+</kw>
+<test id="s1-t1" name="1:launching Flipkart Url And Closing The login Popup" line="10">
+<kw name="Log To Console" library="BuiltIn" type="SETUP">
+<arg>${Test_Case_1_Start}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230811 15:44:53.226" endtime="20230811 15:44:53.226"/>
+</kw>
+<kw name="Given Selecting Mobile From The List" library="keyword">
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>${Closing Pop Up}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230811 15:44:53.228" level="INFO">Clicking button 'xpath://*[@class='_2KpZ6l _2doB4z']'.</msg>
+<status status="PASS" starttime="20230811 15:44:53.226" endtime="20230811 15:44:53.453"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${Electronics}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230811 15:44:53.453" endtime="20230811 15:44:53.542"/>
+</kw>
+<kw name="Mouse Over" library="RPA.Browser.Selenium">
+<arg>${Electronics}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230811 15:44:53.542" level="INFO">Simulating Mouse Over on element 'xpath:(//*[contains(text(),"Electronics")])[2]'.</msg>
+<status status="PASS" starttime="20230811 15:44:53.542" endtime="20230811 15:44:53.869"/>
+</kw>
+<kw name="Input Text" library="RPA.Browser.Selenium">
+<arg>${SearchBar}</arg>
+<arg>${Search Option}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230811 15:44:53.872" level="INFO">Typing text 'Mobile' into text field 'xpath:(//*[@name='q'])'.</msg>
+<status status="PASS" starttime="20230811 15:44:53.869" endtime="20230811 15:44:54.188"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${Submit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230811 15:44:54.192" level="INFO">Clicking element 'xpath://*[@type='submit']'.</msg>
+<status status="PASS" starttime="20230811 15:44:54.188" endtime="20230811 15:44:54.285"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${Select_Mobile}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230811 15:44:54.285" endtime="20230811 15:44:55.138"/>
+</kw>
+<kw name="Scroll Element Into View" library="RPA.Browser.Selenium">
+<arg>${Select_Mobile}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230811 15:44:55.138" endtime="20230811 15:44:55.441"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${Select_Mobile}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230811 15:44:55.442" level="INFO">Clicking element 'xpath:(//*[@class='_4rR01T'])[5]'.</msg>
+<status status="PASS" starttime="20230811 15:44:55.442" endtime="20230811 15:44:55.652"/>
+</kw>
+<status status="PASS" starttime="20230811 15:44:53.226" endtime="20230811 15:44:55.652"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn" type="TEARDOWN">
+<arg>${Test_Case_1_Stop}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230811 15:44:55.652" endtime="20230811 15:44:55.652"/>
+</kw>
+<doc>launching Chrome Url</doc>
+<tag>Regression</tag>
+<status status="PASS" starttime="20230811 15:44:53.221" endtime="20230811 15:44:55.652"/>
+</test>
+<kw name="Close Browser" library="RPA.Browser.Selenium" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230811 15:44:55.652" endtime="20230811 15:44:57.938"/>
+</kw>
+<doc>Flipkart Functionality</doc>
+<status status="PASS" starttime="20230811 15:44:48.785" endtime="20230811 15:44:57.938"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Regression</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Testcase">Testcase</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230811 15:44:48.832" level="WARN">Imported library 'selenium' contains no keywords.</msg>
+</errors>
+</robot>
